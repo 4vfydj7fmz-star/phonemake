@@ -417,6 +417,19 @@ body.ed .screen [data-edl]:hover{outline:1.5px dotted rgba(125,122,255,.55);outl
 .screen .hm-del{position:absolute;top:-7px;left:-7px;width:22px;height:22px;border-radius:50%;background:rgba(110,110,118,.94);color:#fff;display:flex;align-items:center;justify-content:center;z-index:3;box-shadow:0 1px 4px rgba(0,0,0,.3)}
 .hm-wgw.s22 .hm-del{left:-3px}
 .hm-ghost.wgg{width:auto!important;height:auto!important;transform:scale(.9)}
+.fd-ic{width:62px;height:62px;border-radius:23%;background:rgba(255,255,255,.3);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:grid;grid-template-columns:repeat(3,14px);grid-auto-rows:14px;gap:4px;padding:6px;align-content:start;transition:transform .15s,box-shadow .15s}
+.fd-ic .aicon{box-shadow:none}
+.hm-app.merge .aicon,.hm-app.merge .fd-ic{transform:scale(1.18);box-shadow:0 0 0 3px rgba(255,255,255,.9),0 6px 18px rgba(0,0,0,.25);transition:transform .15s}
+.hm-ghost.fd-ic{width:62px!important;height:62px!important}
+.fd-ov{position:absolute;inset:0;z-index:5;background:rgba(20,20,30,.28);backdrop-filter:blur(26px) saturate(1.3);-webkit-backdrop-filter:blur(26px) saturate(1.3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding-bottom:40px}
+.fd-ov.anim{animation:fdIn .28s ease}.fd-ov.anim .fd-panel{animation:fdPop .36s cubic-bezier(.2,1.2,.4,1)}
+@keyframes fdIn{from{opacity:0}}@keyframes fdPop{from{transform:scale(.3);opacity:0}}
+.fd-name{color:#fff;font-size:30px;font-weight:700;text-shadow:0 1px 8px rgba(0,0,0,.25);max-width:310px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.screen .fd-in{width:280px;background:rgba(255,255,255,.22);border:0;border-radius:14px;color:#fff;font:inherit;font-size:24px;font-weight:700;text-align:center;padding:6px 10px;outline:none}
+.fd-panel{width:310px;max-height:470px;min-height:130px;overflow-y:auto;overflow-x:hidden;padding:22px 12px 14px;border-radius:38px;background:rgba(255,255,255,.2);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:88px;row-gap:12px;align-content:start;scrollbar-width:none}
+.fd-panel::-webkit-scrollbar{display:none}
+.fd-tip{font-size:12px;color:rgba(255,255,255,.85);text-shadow:0 1px 4px rgba(0,0,0,.3)}
+.al-bs.v{flex-direction:column}.al-bs.v button+button{border-left:0;border-top:.5px solid rgba(0,0,0,.2)}
 .wg-photo{background-color:#ccc;background-size:cover;background-position:center;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;text-shadow:0 1px 4px rgba(0,0,0,.5)}
 .wg-photo span{font-size:14px;font-weight:700}.wg-photo small{font-size:11.5px;opacity:.9}
 .wg-notes{display:flex;flex-direction:column;gap:3px}
@@ -1812,7 +1825,7 @@ body.readonly #fab,body.readonly #panel{display:none!important}
 <div id="fab"></div>
 <div id="modalHost"></div>
 
-<script id="sim-data" type="application/json" data-sim="">{"v":1,"meta":{"id":"xmvkrotcmj38s0jp","created":"2026-10-23T09:14:26.374Z","exported":"2026-10-23T09:28:13.462Z"},"sys":{"date":"2026-11-14","time":"09:41","live":true,"h24":false,"battery":82,"charging":false,"showPct":true,"carrier":"SKT","net":"5G","wifi":true,"wifiName":"와이파이 이름 설정 가능합니다","wifiNets":["iptime","U+Net5G_23A1","KT_GiGA_5G_88","카페오월_Guest"],"bluetooth":true,"btDevices":[{"id":"bt1","name":"블루투스도 가능합니다","on":true},{"id":"bt2","name":"Apple Watch","on":false}],"airplane":false,"pin":"0000","usePin":true,"lockWall":"","homeWall":"","sound":true,"keySound":true,"volume":70,"editor":true,"readonly":false,"frame":false,"deviceColor":"natural","focus":false},"icons":{},"me":{"name":"name","avatar":"","phone":"010-****-****","email":"name@mail.com"},"lockHidden":{"cev1":"2026-11-14|09:36|0|도윤 만나기|오전 10:00–오전 11:30\n카페 오월","kr2":"2026-11-14|09:31|5|기획팀 🔥|감사합니다 🙏","kr1":"2026-11-14|09:12|2|강도윤|10시에 카페 오월 앞에서 볼래?","bbb1":"2026-11-14|09:03|3|하린|오늘 컴백 쇼케이스 끝나고 또 올게! 밥 꼭 챙겨 먹어","pk1":"2026-11-14|08:40|0|강도윤|부재중 전화 (2)","id1":"2026-11-14|08:31|0|doyoon.kang|오늘 보면 알려줘","ge1":"2026-11-14|07:58|0|강도윤|어제 말한 사진들\n서하야,","pk2":"2026-11-14|07:12|0|010-4321-8765|부재중 전화","tntn2":"2026-11-14|00:14|0|도윤|자?","tntn1":"2026-11-14|00:13|0|도윤|님이 회원님의 게시물을 마음에 들어 합니다: 어제 그 말 진짜였을까. 하루 종일 그 생각뿐","ge2":"2026-11-13|16:20|0|누리 인사팀|[공지] 12월 연말 워크숍 일정 안내\n안녕하세요, 인사팀입니다."},"notifs":[],"kakao":{"me":{"name":"name","avatar":"","status":"","bg":"gen:kkme"},"friends":[],"rooms":[]},"insta":{"me":{"handle":"id","name":"name","avatar":"","bio":"","followers":1284,"following":312,"link":""},"users":[],"stories":[{"id":"s5","user":"u5","img":"gen:story-old","date":"2026-11-12","time":"18:00","seen":false}],"myStory":{"img":"","time":""},"myStories":[{"id":"ms1","img":"gen:my-story-old","date":"2026-11-10","time":"20:12"}],"posts":[],"reels":[],"dms":[],"recent":[],"highlights":[],"activity":[]},"photos":[],"gmail":{"mails":[]},"calendar":{"events":[{"id":"9xslm27","title":"이런식으로 일정을 넣으세요","loc":"","date":"2026-11-18","allDay":true,"start":"12:00","end":"13:00","color":"#0a84ff","note":""}]},"alarms":[{"id":"al1","time":"07:00","label":"알람","repeat":"주중","on":true},{"id":"al2","time":"07:30","label":"다시 알람","repeat":"주중","on":false}],"notes":{"folders":[{"id":"nf1","name":"메모"},{"id":"nf2","name":"일기"}],"items":[{"id":"eox0fbq","folder":"nf1","body":"이런식으로 메모를 작성하세요!","date":"2026-11-14","time":"09:50","pinned":false}]},"weather":{"city":"서울","temp":9,"cond":"대체로 맑음","icon":"sun","hi":13,"lo":3,"feels":7,"summary":"오후 3시경 대체로 맑은 상태가 예상됩니다. 돌풍의 풍속은 최대 6m/s입니다.","hourly":[{"t":"지금","i":"sun","v":9},{"t":"10시","i":"sun","v":10},{"t":"11시","i":"sun","v":11},{"t":"12시","i":"partly","v":12},{"t":"13시","i":"partly","v":13},{"t":"14시","i":"partly","v":13},{"t":"15시","i":"sun","v":12},{"t":"16시","i":"sun","v":11},{"t":"17시","i":"sunset","v":9},{"t":"18시","i":"moon","v":8},{"t":"19시","i":"moon","v":7},{"t":"20시","i":"cloud","v":6}],"daily":[{"d":"오늘","i":"sun","lo":3,"hi":13,"p":0},{"d":"일","i":"partly","lo":4,"hi":12,"p":10},{"d":"월","i":"rain","lo":6,"hi":11,"p":70},{"d":"화","i":"cloud","lo":2,"hi":9,"p":20},{"d":"수","i":"sun","lo":-1,"hi":8,"p":0},{"d":"목","i":"sun","lo":-2,"hi":7,"p":0},{"d":"금","i":"partly","lo":0,"hi":9,"p":10},{"d":"토","i":"snow","lo":-3,"hi":4,"p":60},{"d":"일","i":"cloud","lo":-2,"hi":6,"p":30},{"d":"월","i":"sun","lo":-1,"hi":8,"p":0}],"aqi":"좋음","aqiVal":28,"uv":2,"sunrise":"07:06","sunset":"17:22","humidity":48,"wind":"북서 3m/s","rain":0},"map":{"pins":[{"id":"pn1","x":610,"y":470,"name":"우리 동네 붕어빵","note":"저녁 6시 이후에만 열림","fav":true}],"favs":["owol"],"notes":{"owol":"이런 식으로 장소를 넣으세요 "},"droppedOn":[]},"phone":{"contacts":[],"calls":[]},"safari":{"favorites":[{"id":"sf6","title":"즐찾","url":"ganeung.kr","color":"#30b0c7"}],"searches":[],"history":[],"pages":[{"id":"pg1","url":"cafeowol.kr/menu","title":"카페 오월 — 11월 메뉴","img":"gen:latte","body":"11월 한정\n\n· 밤 라떼 6,500\n· 군고구마 크림 라떼 6,800\n· 유자 소다 6,000\n\n매일 10:00 – 22:00 / 서강로 12, 2층"},{"id":"pg2","url":"news.today.kr/life/2291","title":"고백할 때 하면 안 되는 말 10가지","img":"gen:news-life","body":"오늘뉴스 라이프 · 2026.11.12\n\n고백은 타이밍이다. 전문가들은 \"상대가 편안한 장소에서, 짧고 솔직하게\" 말하라고 조언한다.\n\n1. \"그냥 해본 말이야\"\n2. \"너 아니면 안 돼\" ..."}],"tab":{"url":"sif-festival.kr","title":"sif-festival.kr"}},"music":{"playlist":{"title":"플레이리스트","owner":"name","cover":"gen:pl-cover","desc":"mp3파일 추천합니다 (사클/유튜브도 가능하지만 못생겨짐)"},"tracks":[{"id":"t1","title":"노래도 추가해 보세요","artist":"artist","album":"album","cover":"gen:al-1","url":"","dur":214}]},"tw":{"me":{"handle":"id","name":"name","avatar":"","header":"gen:tw-header-me","bio":"","location":"","link":"","joined":"2019년 3월","following":248,"followers":391},"users":[],"set":{"hideQuotes":false,"hideMentions":false,"openOthers":false},"tweets":[],"notifs":[],"dms":[],"trends":[{"id":"tt1","cat":"대한민국에서 트렌드 중","term":"여기에","count":"2.4만"},{"id":"tt2","cat":"엔터테인먼트 · 트렌드","term":"실트를","count":"8,120"},{"id":"tt3","cat":"대한민국에서 트렌드 중","term":"올리면","count":"3,402"},{"id":"tt4","cat":"스포츠 · 트렌드","term":"됩니다","count":"1,980"}]},"yt":{"me":{"name":"nickname","handle":"id","avatar":""},"channels":[],"subs":[],"videos":[]},"bubble":{"rooms":[]},"ai":{"model":"gpt-4o-mini","persona":""},"layout":{"home":["insta","photos","gmail","calendar","clock","notes","weather","settings","map","tw","yt","bubble"],"dock":["phone","safari","kakao","music"]}}</script>
+<script id="sim-data" type="application/json" data-sim="">{"v": 1, "meta": {"id": "sample-200d3dbb06d0"}}</script>
 <script data-sim="">
 'use strict';
 /* =========================================================
@@ -2092,7 +2105,14 @@ function icf(name, size = 24, extra = '') { // 채운 버전
 }
 
 /* ---------- 기본 데이터 ---------- */
+/* 기본 샘플 데이터: 사용자가 설정해 둔 상태 (빠진 항목만 아래 기본값으로 채움) */
+const USER_SAMPLE = {"v": 1, "sys": {"date": "2026-11-14", "time": "09:41", "live": true, "h24": false, "battery": 82, "charging": false, "showPct": true, "carrier": "SKT", "net": "5G", "wifi": true, "wifiName": "와이파이 이름 설정 가능합니다", "wifiNets": ["iptime", "U+Net5G_23A1", "KT_GiGA_5G_88", "카페오월_Guest"], "bluetooth": true, "btDevices": [{"id": "bt1", "name": "블루투스도 가능합니다", "on": true}, {"id": "bt2", "name": "Apple Watch", "on": false}], "airplane": false, "pin": "0000", "usePin": true, "lockWall": "", "homeWall": "", "sound": true, "keySound": true, "volume": 70, "editor": true, "readonly": false, "frame": false, "deviceColor": "natural", "focus": false}, "icons": {}, "me": {"name": "name", "avatar": "", "phone": "010-****-****", "email": "name@mail.com"}, "lockHidden": {"cev1": "2026-11-14|09:36|0|도윤 만나기|오전 10:00–오전 11:30\n카페 오월", "kr2": "2026-11-14|09:31|5|기획팀 🔥|감사합니다 🙏", "kr1": "2026-11-14|09:12|2|강도윤|10시에 카페 오월 앞에서 볼래?", "bbb1": "2026-11-14|09:03|3|하린|오늘 컴백 쇼케이스 끝나고 또 올게! 밥 꼭 챙겨 먹어", "pk1": "2026-11-14|08:40|0|강도윤|부재중 전화 (2)", "id1": "2026-11-14|08:31|0|doyoon.kang|오늘 보면 알려줘", "ge1": "2026-11-14|07:58|0|강도윤|어제 말한 사진들\n서하야,", "pk2": "2026-11-14|07:12|0|010-4321-8765|부재중 전화", "tntn2": "2026-11-14|00:14|0|도윤|자?", "tntn1": "2026-11-14|00:13|0|도윤|님이 회원님의 게시물을 마음에 들어 합니다: 어제 그 말 진짜였을까. 하루 종일 그 생각뿐", "ge2": "2026-11-13|16:20|0|누리 인사팀|[공지] 12월 연말 워크숍 일정 안내\n안녕하세요, 인사팀입니다."}, "notifs": [], "kakao": {"me": {"name": "name", "avatar": "", "status": "", "bg": "gen:kkme"}, "friends": [], "rooms": []}, "insta": {"me": {"handle": "id", "name": "name", "avatar": "", "bio": "", "followers": 1284, "following": 312, "link": ""}, "users": [], "stories": [{"id": "s5", "user": "u5", "img": "gen:story-old", "date": "2026-11-12", "time": "18:00", "seen": false}], "myStory": {"img": "", "time": ""}, "myStories": [{"id": "ms1", "img": "gen:my-story-old", "date": "2026-11-10", "time": "20:12"}], "posts": [], "reels": [], "dms": [], "recent": [], "highlights": [], "activity": []}, "photos": [], "gmail": {"mails": []}, "calendar": {"events": [{"id": "9xslm27", "title": "이런식으로 일정을 넣으세요", "loc": "", "date": "2026-11-18", "allDay": true, "start": "12:00", "end": "13:00", "color": "#0a84ff", "note": ""}]}, "alarms": [{"id": "al1", "time": "07:00", "label": "알람", "repeat": "주중", "on": true}, {"id": "al2", "time": "07:30", "label": "다시 알람", "repeat": "주중", "on": false}], "notes": {"folders": [{"id": "nf1", "name": "메모"}, {"id": "nf2", "name": "일기"}], "items": [{"id": "eox0fbq", "folder": "nf1", "body": "이런식으로 메모를 작성하세요!", "date": "2026-11-14", "time": "09:50", "pinned": false}]}, "weather": {"city": "서울", "temp": 9, "cond": "대체로 맑음", "icon": "sun", "hi": 13, "lo": 3, "feels": 7, "summary": "오후 3시경 대체로 맑은 상태가 예상됩니다. 돌풍의 풍속은 최대 6m/s입니다.", "hourly": [{"t": "지금", "i": "sun", "v": 9}, {"t": "10시", "i": "sun", "v": 10}, {"t": "11시", "i": "sun", "v": 11}, {"t": "12시", "i": "partly", "v": 12}, {"t": "13시", "i": "partly", "v": 13}, {"t": "14시", "i": "partly", "v": 13}, {"t": "15시", "i": "sun", "v": 12}, {"t": "16시", "i": "sun", "v": 11}, {"t": "17시", "i": "sunset", "v": 9}, {"t": "18시", "i": "moon", "v": 8}, {"t": "19시", "i": "moon", "v": 7}, {"t": "20시", "i": "cloud", "v": 6}], "daily": [{"d": "오늘", "i": "sun", "lo": 3, "hi": 13, "p": 0}, {"d": "일", "i": "partly", "lo": 4, "hi": 12, "p": 10}, {"d": "월", "i": "rain", "lo": 6, "hi": 11, "p": 70}, {"d": "화", "i": "cloud", "lo": 2, "hi": 9, "p": 20}, {"d": "수", "i": "sun", "lo": -1, "hi": 8, "p": 0}, {"d": "목", "i": "sun", "lo": -2, "hi": 7, "p": 0}, {"d": "금", "i": "partly", "lo": 0, "hi": 9, "p": 10}, {"d": "토", "i": "snow", "lo": -3, "hi": 4, "p": 60}, {"d": "일", "i": "cloud", "lo": -2, "hi": 6, "p": 30}, {"d": "월", "i": "sun", "lo": -1, "hi": 8, "p": 0}], "aqi": "좋음", "aqiVal": 28, "uv": 2, "sunrise": "07:06", "sunset": "17:22", "humidity": 48, "wind": "북서 3m/s", "rain": 0}, "map": {"pins": [{"id": "pn1", "x": 610, "y": 470, "name": "우리 동네 붕어빵", "note": "저녁 6시 이후에만 열림", "fav": true}], "favs": ["owol"], "notes": {"owol": "이런 식으로 장소를 넣으세요 "}, "droppedOn": []}, "phone": {"contacts": [], "calls": []}, "safari": {"favorites": [{"id": "sf6", "title": "즐찾", "url": "ganeung.kr", "color": "#30b0c7"}], "searches": [], "history": [], "pages": [{"id": "pg1", "url": "cafeowol.kr/menu", "title": "카페 오월 — 11월 메뉴", "img": "gen:latte", "body": "11월 한정\n\n· 밤 라떼 6,500\n· 군고구마 크림 라떼 6,800\n· 유자 소다 6,000\n\n매일 10:00 – 22:00 / 서강로 12, 2층"}, {"id": "pg2", "url": "news.today.kr/life/2291", "title": "고백할 때 하면 안 되는 말 10가지", "img": "gen:news-life", "body": "오늘뉴스 라이프 · 2026.11.12\n\n고백은 타이밍이다. 전문가들은 \"상대가 편안한 장소에서, 짧고 솔직하게\" 말하라고 조언한다.\n\n1. \"그냥 해본 말이야\"\n2. \"너 아니면 안 돼\" ..."}], "tab": {"url": "sif-festival.kr", "title": "sif-festival.kr"}}, "music": {"playlist": {"title": "플레이리스트", "owner": "name", "cover": "gen:pl-cover", "desc": "mp3파일 추천합니다 (사클/유튜브도 가능하지만 못생겨짐)"}, "tracks": [{"id": "t1", "title": "노래도 추가해 보세요", "artist": "artist", "album": "album", "cover": "gen:al-1", "url": "", "dur": 214}]}, "tw": {"me": {"handle": "id", "name": "name", "avatar": "", "header": "gen:tw-header-me", "bio": "", "location": "", "link": "", "joined": "2019년 3월", "following": 248, "followers": 391}, "users": [], "set": {"hideQuotes": false, "hideMentions": false, "openOthers": false}, "tweets": [], "notifs": [], "dms": [], "trends": [{"id": "tt1", "cat": "대한민국에서 트렌드 중", "term": "여기에", "count": "2.4만"}, {"id": "tt2", "cat": "엔터테인먼트 · 트렌드", "term": "실트를", "count": "8,120"}, {"id": "tt3", "cat": "대한민국에서 트렌드 중", "term": "올리면", "count": "3,402"}, {"id": "tt4", "cat": "스포츠 · 트렌드", "term": "됩니다", "count": "1,980"}]}, "yt": {"me": {"name": "nickname", "handle": "id", "avatar": ""}, "channels": [], "subs": [], "videos": []}, "bubble": {"rooms": []}, "ai": {"model": "gpt-4o-mini", "persona": ""}, "layout": {"home": ["insta", "photos", "gmail", "calendar", "clock", "notes", "weather", "settings", "map", "tw", "yt", "bubble"], "dock": ["phone", "safari", "kakao", "music"]}};
 function makeDefault() {
+  const d = deepFill(deep(USER_SAMPLE), makeBaseDefault());
+  d.meta = { id: 'main', created: new Date().toISOString() };
+  return d;
+}
+function makeBaseDefault() {
   const D = '2026-11-14', Y = '2026-11-13';
   return {
     v: 1,
@@ -2932,101 +2952,209 @@ const WIDGETS = {
   'w:notes': { name: '메모', size: '소형', span: 's22', app: 'notes', icon: 'compose', color: '#e3a600', html: () => notesWidgetHTML() }
 };
 const DEF_WIDGETS = ['w:cal', 'w:wx'];
-// 홈 화면 배치: home(앱+위젯 순서), dock(앱 4개까지), hidden(홈 화면에서 제거한 앱·위젯 → 앱 보관함)
+// 홈 화면 배치: home(앱·위젯·폴더 순서), dock(앱·폴더 4개까지), hidden(앱 보관함), folders({ 'f:id': { name, apps:[...] } })
+const isFolder = id => String(id || '').startsWith('f:');
+function cleanFolders(L) { // 빈 폴더는 자동으로 없애기
+  Object.keys(L.folders).forEach(fid => {
+    if (L.folders[fid].apps.length) return;
+    delete L.folders[fid];
+    [L.home, L.dock].forEach(a => { const i = a.indexOf(fid); if (i >= 0) a.splice(i, 1); });
+    if (U.fOpen === fid) U.fOpen = null;
+  });
+}
 function homeLayout() {
-  let L = S.layout; if (!L || !Array.isArray(L.home) || !Array.isArray(L.dock)) L = S.layout = { home: [...DEF_WIDGETS, ...HOME_APPS], dock: [...DOCK_APPS], hidden: [] };
+  let L = S.layout; if (!L || !Array.isArray(L.home) || !Array.isArray(L.dock)) L = S.layout = { home: [...DEF_WIDGETS, ...HOME_APPS], dock: [...DOCK_APPS], hidden: [], folders: {} };
   if (!Array.isArray(L.hidden)) L.hidden = [];
-  const seen = new Set(), ok = id => (APPDEF[id] || WIDGETS[id]) && !seen.has(id) && (seen.add(id), true);
+  if (!L.folders || typeof L.folders !== 'object' || Array.isArray(L.folders)) L.folders = {};
+  const isF = id => isFolder(id) && L.folders[id] && Array.isArray(L.folders[id].apps);
+  const seen = new Set(), ok = id => (APPDEF[id] || WIDGETS[id] || isF(id)) && !seen.has(id) && (seen.add(id), true);
   L.home = L.home.filter(ok);
-  const dock = L.dock.filter(id => APPDEF[id] && !seen.has(id));
+  const dock = L.dock.filter(id => (APPDEF[id] || isF(id)) && !seen.has(id));
   L.dock = dock.slice(0, 4); L.dock.forEach(id => seen.add(id));
   dock.slice(4).forEach(id => { seen.add(id); L.home.push(id); });
-  L.hidden = L.hidden.filter(ok);
+  Object.keys(L.folders).forEach(fid => { // 폴더 안 앱 정리
+    const f = L.folders[fid];
+    if (!isF(fid)) { delete L.folders[fid]; return; }
+    if (!f.name) f.name = '폴더';
+    if (!seen.has(fid)) { seen.add(fid); L.home.push(fid); }
+    f.apps = f.apps.filter(id => APPDEF[id] && ok(id));
+  });
+  cleanFolders(L);
+  L.hidden = L.hidden.filter(id => (APPDEF[id] || WIDGETS[id]) && ok(id));
   const front = DEF_WIDGETS.filter(id => !seen.has(id)); front.forEach(id => seen.add(id)); L.home.unshift(...front); // 예전 저장 데이터: 기본 위젯을 맨 위에
   Object.keys(WIDGETS).forEach(id => { if (!seen.has(id)) { seen.add(id); L.hidden.push(id); } }); // 새 위젯은 보관함에
   Object.keys(APPDEF).forEach(id => { if (!seen.has(id)) { seen.add(id); L.home.push(id); } }); // 새 앱은 홈 끝에
   return L;
 }
-function itemName(id) { return WIDGETS[id] ? WIDGETS[id].name + ' 위젯' : (APPDEF[id]?.name || id); }
+function itemName(id) { if (isFolder(id)) return (S.layout?.folders?.[id]?.name || '폴더') + ' 폴더'; return WIDGETS[id] ? WIDGETS[id].name + ' 위젯' : (APPDEF[id]?.name || id); }
 const delBtn = id => `<button class="hm-del" data-act="homeRemove" data-id="${id}" aria-label="${esc(itemName(id))} 제거">${ic('minus', 13)}</button>`;
 function widgetCell(id) {
   const w = WIDGETS[id];
   return `<div class="hm-wgw ${w.span} ${U.hmSel === id ? 'sel' : ''}" data-act="open" data-app="${w.app}" data-item="${id}" data-zone="home">${w.html()}${U.homeEdit ? delBtn(id) : ''}</div>`;
 }
+function badgeHTML(b) { return b ? `<span class="badge">${b > 999 ? '999+' : b}</span>` : ''; }
 function iconCell(id, zone = 'home') {
-  const b = badgeCount(id);
-  return `<div class="hm-app ${U.hmSel === id ? 'sel' : ''}" data-act="open" data-app="${id}" data-item="${id}" data-zone="${zone}"><div class="hm-ic">${appIcon(id)}${b ? `<span class="badge">${b > 999 ? '999+' : b}</span>` : ''}${U.homeEdit ? delBtn(id) : ''}</div><span class="hm-lb">${esc(APPDEF[id].name)}</span></div>`;
+  return `<div class="hm-app ${U.hmSel === id ? 'sel' : ''}" data-act="open" data-app="${id}" data-item="${id}" data-zone="${zone}"><div class="hm-ic">${appIcon(id)}${badgeHTML(badgeCount(id))}${U.homeEdit ? delBtn(id) : ''}</div><span class="hm-lb">${esc(APPDEF[id].name)}</span></div>`;
+}
+function folderCell(id, zone = 'home') {
+  const f = S.layout.folders[id], b = f.apps.reduce((n, a) => n + badgeCount(a), 0);
+  return `<div class="hm-app hm-fold ${U.hmSel === id ? 'sel' : ''}" data-act="hFolder" data-item="${id}" data-zone="${zone}"><div class="hm-ic"><div class="fd-ic">${f.apps.slice(0, 9).map(a => appIcon(a, 14)).join('')}</div>${badgeHTML(b)}${U.homeEdit ? delBtn(id) : ''}</div><span class="hm-lb">${esc(f.name)}</span></div>`;
+}
+function homeCell(id, zone) { return WIDGETS[id] ? widgetCell(id) : isFolder(id) ? folderCell(id, zone) : iconCell(id, zone); }
+function folderOverlay(fid) {
+  const f = S.layout.folders[fid], anim = U.fAnim; U.fAnim = false;
+  return `<div class="fd-ov ${anim ? 'anim' : ''}" data-act="hFolderClose" data-zone="out">
+    <div class="fd-name">${U.homeEdit ? `<input class="fd-in" id="fdName" value="${esc(f.name)}" maxlength="20" data-change="hFolderName" data-enter="hFolderNameEnter" data-id="${fid}" aria-label="폴더 이름">` : esc(f.name)}</div>
+    <div class="fd-panel" data-zone="folder" data-folder="${fid}">${f.apps.map(a => iconCell(a, 'folder')).join('')}</div>
+    ${U.homeEdit ? '<div class="fd-tip">앱을 폴더 밖으로 끌어내면 홈 화면으로 나와요</div>' : ''}</div>`;
 }
 function renderHome() {
   const el = $('#home'); if (!el) return;
   const L = homeLayout();
+  if (U.fOpen && !L.folders[U.fOpen]) U.fOpen = null;
   el.classList.toggle('editing', !!U.homeEdit);
   const gs = $('.hm-grid', el)?.scrollTop || 0;
   el.innerHTML = `<div class="hm-wall ${S.sys.homeWall || S.sys.lockWall ? '' : 'def'}" style="${wallStyle('home')}"></div>
-  ${U.homeEdit ? `<div class="hm-edbar"><button class="glass-l hm-add" data-act="homeLib" aria-label="앱·위젯 추가">${ic('plus', 16)}</button><span class="glass-d">${U.hmSel ? '바꿀 위치의 앱·위젯을 누르세요' : '끌어서 옮기기 · − 제거 · ＋ 다시 넣기'}</span><button class="glass-l" data-act="homeDone">완료</button></div>` : ''}
+  ${U.homeEdit ? `<div class="hm-edbar"><button class="glass-l hm-add" data-act="homeLib" aria-label="앱·위젯·폴더 추가">${ic('plus', 16)}</button><span class="glass-d">${U.hmSel ? '바꿀 위치의 항목을 누르세요' : '앱을 앱 위에 끌어 놓으면 폴더 · − 제거 · ＋ 추가'}</span><button class="glass-l" data-act="homeDone">완료</button></div>` : ''}
   <div class="hm-grid" data-zone="home">
-    ${L.home.map(id => WIDGETS[id] ? widgetCell(id) : iconCell(id, 'home')).join('')}
+    ${L.home.map(id => homeCell(id, 'home')).join('')}
   </div>
   ${U.homeEdit ? '' : `<div class="hm-search glass-d" data-act="open" data-app="safari">${ic('search', 13)}<span>검색</span></div>`}
-  <div class="dock glass-d" data-zone="dock">${L.dock.map(id => iconCell(id, 'dock')).join('')}</div>`;
+  <div class="dock glass-d" data-zone="dock">${L.dock.map(id => homeCell(id, 'dock')).join('')}</div>
+  ${U.fOpen ? folderOverlay(U.fOpen) : ''}`;
   if (gs) $('.hm-grid', el).scrollTop = gs;
 }
 
-/* ---------- 홈 화면 편집 (앱 옮기기) ---------- */
+/* ---------- 홈 화면 편집 (앱 옮기기 · 폴더) ---------- */
 function homeEditStart() { if (U.locked || U.app) return; U.homeEdit = true; U.hmSel = null; haptic(20); renderHome(); }
 ACT.homeDone = () => { U.homeEdit = false; U.hmSel = null; renderHome(); save(); };
-function zoneOf(L, id) { return L.dock.includes(id) ? L.dock : L.home; }
+function zoneOf(L, id) {
+  if (L.dock.includes(id)) return L.dock;
+  for (const f of Object.values(L.folders)) if (f.apps.includes(id)) return f.apps;
+  return L.home;
+}
+const inFolderArr = (L, arr) => Object.values(L.folders).some(f => f.apps === arr);
+function folderAutoName(a, b) {
+  const CAT = { insta: '소셜', tw: '소셜', kakao: '소셜', bubble: '소셜', phone: '소셜', yt: '엔터테인먼트', music: '엔터테인먼트', photos: '사진 및 비디오', gmail: '생산성', calendar: '생산성', notes: '생산성', clock: '유틸리티', weather: '유틸리티', settings: '유틸리티', map: '여행', safari: '유틸리티' };
+  return CAT[a] && CAT[a] === CAT[b] ? CAT[a] : '폴더';
+}
 function homePick(id) { // 두 항목을 차례로 누르면 자리 교환
   if (!U.hmSel) { U.hmSel = id; renderHome(); return; }
   if (U.hmSel === id) { U.hmSel = null; renderHome(); return; }
   const L = homeLayout(), a = U.hmSel;
-  const za = zoneOf(L, a), zb = zoneOf(L, id);
-  if ((WIDGETS[a] && zb === L.dock) || (WIDGETS[id] && za === L.dock)) { toast('위젯은 독에 넣을 수 없어요'); U.hmSel = null; renderHome(); return; }
+  const za = zoneOf(L, a), zb = zoneOf(L, id), fa = inFolderArr(L, za), fb = inFolderArr(L, zb);
+  const no = m => { toast(m); U.hmSel = null; renderHome(); };
+  if ((WIDGETS[a] && (zb === L.dock || fb)) || (WIDGETS[id] && (za === L.dock || fa))) return no(fb || fa ? '위젯은 폴더에 넣을 수 없어요' : '위젯은 독에 넣을 수 없어요');
+  if ((isFolder(a) && fb) || (isFolder(id) && fa)) return no('폴더 안에 폴더를 넣을 수 없어요');
   const ia = za.indexOf(a), ib = zb.indexOf(id);
   za[ia] = id; zb[ib] = a; U.hmSel = null; haptic(8); save(); renderHome();
 }
-function homeMove(id, targetId, zone) { // 끌어서 놓기: 대상 자리로 이동 (나머지는 한 칸씩 밀림)
-  const L = homeLayout(), from = zoneOf(L, id), isW = !!WIDGETS[id];
+// 끌어서 놓기. opt.merge: 앱 아이콘 위에 놓음(폴더 만들기·넣기), opt.fid: 열린 폴더
+function homeMove(id, targetId, zone, opt = {}) {
+  const L = homeLayout(), from = zoneOf(L, id), isW = !!WIDGETS[id], isF = isFolder(id);
   if (targetId === id) { renderHome(); return; }
-  const noDock = () => { toast('위젯은 독에 넣을 수 없어요'); renderHome(); };
+  const no = m => { toast(m); renderHome(); };
+  const take = () => { const i = from.indexOf(id); if (i >= 0) from.splice(i, 1); };
+  const done = () => { cleanFolders(L); haptic(8); save(); renderHome(); };
+  if (zone === 'out' && U.fOpen) { // 열린 폴더 밖으로 끌어냄 → 폴더 바로 뒤로
+    const fid = U.fOpen, host = zoneOf(L, fid);
+    take(); U.fOpen = null;
+    if (host === L.dock && L.dock.length >= 4) L.home.push(id); else host.splice(host.indexOf(fid) + 1, 0, id);
+    return done();
+  }
+  if (zone === 'folder' && !targetId) { // 열린 폴더의 빈 곳
+    const f = L.folders[opt.fid]; if (!f) return renderHome();
+    if (isW || isF) return no(isW ? '위젯은 폴더에 넣을 수 없어요' : '폴더 안에 폴더를 넣을 수 없어요');
+    take(); f.apps.push(id); return done();
+  }
   if (targetId) {
-    const to = zoneOf(L, targetId);
-    if (isW && to === L.dock) return noDock();
+    const to = zoneOf(L, targetId), toF = inFolderArr(L, to);
+    if (opt.merge && !isW && !isF && !WIDGETS[targetId] && !toF) {
+      if (isFolder(targetId)) { take(); L.folders[targetId].apps.push(id); toast(`'${L.folders[targetId].name}' 폴더에 넣었어요`); return done(); }
+      const fid = 'f:' + uid();
+      L.folders[fid] = { name: folderAutoName(targetId, id), apps: [targetId, id] };
+      to[to.indexOf(targetId)] = fid; take();
+      U.fOpen = fid; U.fAnim = true;
+      return done();
+    }
+    if (isW && (to === L.dock || toF)) return no(toF ? '위젯은 폴더에 넣을 수 없어요' : '위젯은 독에 넣을 수 없어요');
+    if (isF && toF) return no('폴더 안에 폴더를 넣을 수 없어요');
     if (to === L.dock && from !== L.dock && L.dock.length >= 4) { // 꽉 찬 독으로 → 자리 교환
+      if (WIDGETS[targetId] || (isFolder(targetId) && inFolderArr(L, from))) return no('여기로는 옮길 수 없어요');
       const ia = from.indexOf(id), ib = to.indexOf(targetId); from[ia] = targetId; to[ib] = id;
     } else {
       const fwd = from === to && from.indexOf(id) < to.indexOf(targetId);
-      from.splice(from.indexOf(id), 1);
-      to.splice(to.indexOf(targetId) + (fwd ? 1 : 0), 0, id);
+      take(); to.splice(to.indexOf(targetId) + (fwd ? 1 : 0), 0, id);
     }
   } else if (zone === 'dock') {
-    if (isW) return noDock();
-    if (from !== L.dock && L.dock.length >= 4) { toast('독에는 앱을 4개까지 둘 수 있어요'); renderHome(); return; }
-    from.splice(from.indexOf(id), 1); L.dock.push(id);
-  } else { from.splice(from.indexOf(id), 1); L.home.push(id); }
-  haptic(8); save(); renderHome();
+    if (isW) return no('위젯은 독에 넣을 수 없어요');
+    if (from !== L.dock && L.dock.length >= 4) return no('독에는 4개까지 둘 수 있어요');
+    take(); L.dock.push(id);
+  } else { take(); L.home.push(id); }
+  done();
+}
+function unfoldFolder(L, fid) { // 폴더 풀기: 안의 앱을 폴더 자리에
+  const f = L.folders[fid], host = zoneOf(L, fid), i = host.indexOf(fid);
+  host.splice(i, 1, ...f.apps); f.apps = [];
+  if (host === L.dock && L.dock.length > 4) L.home.push(...L.dock.splice(4));
+  cleanFolders(L);
 }
 ACT.homeRemove = el => {
   const id = el.dataset.id, w = WIDGETS[id];
+  if (isFolder(id)) {
+    phoneAlert(`'${itemName(id)}'`, '폴더를 풀면 안에 있던 앱이 홈 화면으로 나와요.', [
+      { label: '폴더 풀기', bold: true, fn: () => { const L = homeLayout(); unfoldFolder(L, id); if (U.hmSel === id) U.hmSel = null; haptic(10); save(); renderHome(); } },
+      { label: '앱까지 모두 보관함으로', danger: true, fn: () => { const L = homeLayout(); L.folders[id].apps.forEach(a => { if (!L.hidden.includes(a)) L.hidden.push(a); }); L.folders[id].apps = []; cleanFolders(L); if (U.hmSel === id) U.hmSel = null; haptic(10); save(); renderHome(); } },
+      { label: '취소' }]);
+    return;
+  }
   phoneAlert(`'${itemName(id)}' 제거`, '홈 화면에서만 사라져요.\n편집 화면 왼쪽 위 ＋(앱 보관함)에서 언제든 다시 넣을 수 있어요.', [{ label: '취소' }, {
     label: w ? '위젯 제거' : '홈 화면에서 제거', danger: true, fn: () => {
-      const L = homeLayout();
-      [L.home, L.dock].forEach(arr => { const i = arr.indexOf(id); if (i >= 0) arr.splice(i, 1); });
+      const L = homeLayout(), z = zoneOf(L, id), i = z.indexOf(id);
+      if (i >= 0) z.splice(i, 1);
       if (!L.hidden.includes(id)) L.hidden.push(id);
       if (U.hmSel === id) U.hmSel = null;
-      haptic(10); save(); renderHome();
+      cleanFolders(L); haptic(10); save(); renderHome();
     }
   }]);
+};
+/* 폴더 열기 · 닫기 · 이름 */
+ACT.hFolder = el => {
+  const id = el.dataset.item;
+  if (U.homeEdit && U.hmSel && U.hmSel !== id) { homePick(id); return; }
+  if (U.homeEdit && U.hmSel === id) { U.hmSel = null; }
+  U.fOpen = id; U.fAnim = true; renderHome();
+};
+ACT.hFolderClose = (el, e) => { if (e?.target?.closest?.('.fd-panel,.fd-name')) return; U.fOpen = null; renderHome(); };
+CHG.hFolderName = el => { const f = homeLayout().folders[el.dataset.id]; if (!f) return; f.name = el.value.trim().slice(0, 20) || '폴더'; save(); renderHome(); };
+KEY.hFolderNameEnter = el => el.blur();
+ACT.hFolderNew = () => {
+  const L = homeLayout(), opts = [...L.home, ...L.dock].filter(id => APPDEF[id]).map(id => [id, APPDEF[id].name]);
+  if (!opts.length) { toast('폴더에 넣을 앱이 없어요'); return; }
+  openForm({
+    title: '앱 폴더 만들기', note: '고른 앱이 새 폴더에 들어가요. 홈 화면 편집 중에 앱을 다른 앱 아이콘 위에 끌어다 놓아도 폴더가 만들어져요.',
+    obj: { name: '폴더', apps: [] }, fields: [{ k: 'name', l: '폴더 이름', max: 20 }, { k: 'apps', l: '넣을 앱 (첫 번째로 고른 앱 자리에 폴더가 생겨요)', t: 'multi', opts }],
+    onSave: v => {
+      if (!v.apps.length) { toast('앱을 하나 이상 고르세요'); return false; }
+      const L = homeLayout(), first = v.apps[0], host = zoneOf(L, first), fid = 'f:' + uid();
+      L.folders[fid] = { name: String(v.name || '').trim().slice(0, 20) || '폴더', apps: [] };
+      host[host.indexOf(first)] = fid;
+      v.apps.forEach(a => { if (a !== first) { const z = zoneOf(L, a), i = z.indexOf(a); if (i >= 0) z.splice(i, 1); } L.folders[fid].apps.push(a); });
+      U.fOpen = fid; U.fAnim = true;
+    }
+  });
 };
 function homeLibHTML() {
   const L = homeLayout(), apps = L.hidden.filter(id => APPDEF[id]), wgs = L.hidden.filter(id => WIDGETS[id]);
   const none = t => `<div class="cell"><span class="cl" style="color:#8e8e93">${t}</span></div>`;
   return `<div class="sh-h"><b>앱 보관함</b><button data-act="sheetClose">완료</button></div><div class="sh-scroll" data-sk="hmlib">
+    <div class="grp"><div class="cell s-row nav" data-act="hFolderNewSheet"><span class="s-ic" style="background:#5e5ce6">${ic('folder', 18)}</span><span class="cl blue">새 앱 폴더 만들기</span>${ic('chevR', 16)}</div></div>
     <div class="grp-t">위젯</div><div class="grp">${wgs.map(id => `<div class="cell s-row nav" data-act="homeRestore" data-id="${id}"><span class="s-ic" style="background:${WIDGETS[id].color}">${ic(WIDGETS[id].icon, 18)}</span><span class="cl">${esc(WIDGETS[id].name)}</span><small>${WIDGETS[id].size}</small><span class="blue">${ic('plusC', 22)}</span></div>`).join('') || none('모든 위젯이 홈 화면에 있어요')}</div>
     <div class="grp-t">홈 화면에서 제거한 앱</div><div class="grp">${apps.map(id => `<div class="cell s-row nav" data-act="homeRestore" data-id="${id}"><span class="s-aic">${appIcon(id, 32)}</span><span class="cl">${esc(APPDEF[id].name)}</span><span class="blue">${ic('plusC', 22)}</span></div>`).join('') || none('제거한 앱이 없어요')}</div>
     <div class="grp-f">누르면 홈 화면에 다시 들어가요. 앱은 맨 끝, 위젯은 맨 위에 놓이니 끌어서 원하는 자리로 옮기세요.</div><div style="height:20px"></div></div>`;
 }
 ACT.homeLib = () => openSheet(homeLibHTML(), { cls: 'sheet-tall' });
+ACT.hFolderNewSheet = () => { closeSheet(true); ACT.hFolderNew(); };
 ACT.homeRestore = el => {
   const id = el.dataset.id, L = homeLayout();
   L.hidden = L.hidden.filter(x => x !== id);
@@ -3240,7 +3368,7 @@ function stopAlarm() { clearInterval(U.alarmT); U.alarmRinging = null; $('#overl
 
 ACT.back = () => back();
 ACT.home = () => closeApp();
-ACT.homebar = () => { if (U.sheet && !U.app && !U.locked) { closeSheet(); return; } if (U.homeEdit) { ACT.homeDone(); return; }
+ACT.homebar = () => { if (U.sheet && !U.app && !U.locked) { closeSheet(); return; } if (U.fOpen && !U.app && !U.locked) { U.fOpen = null; renderHome(); return; } if (U.homeEdit) { ACT.homeDone(); return; }
   if (U.call?.full) return; if (U.alarmRinging) return; if (U.locked) startUnlock(); else if (U.sheet) closeSheet(); else if (U.app) closeApp(); };
 ACT.open = el => U.homeEdit && el.closest('#home') ? (el.closest('[data-item]') ? homePick(el.closest('[data-item]').dataset.item) : null) : openApp(el.dataset.app, el.dataset.view, el.dataset.p ? JSON.parse(el.dataset.p) : undefined);
 ACT.push = el => push(el.dataset.v, el.dataset.p ? JSON.parse(el.dataset.p) : {});
@@ -5307,7 +5435,7 @@ function renderPanel() {
       <label class="pn-sw"><input type="checkbox" data-change="pBool" data-k="sys.focus" ${pv('sys.focus') ? 'checked' : ''}><span></span>방해금지</label></div>
       <div class="pn-g2"><label>통신사<input id="pCarrier" value="${esc(S.sys.carrier)}" data-change="sText" data-k="sys.carrier"></label><label>네트워크<input id="pNet" value="${esc(S.sys.net)}" data-change="sText" data-k="sys.net"></label></div></section>
     <section><h4>기기 · 배경</h4><label class="pn-sw"><input type="checkbox" data-change="pBool" data-k="sys.frame" ${pv('sys.frame') ? 'checked' : ''}><span></span>기기 테두리(프레임) 보이기</label><div class="pn-btns"><button data-act="fsOn">전체화면으로 보기</button><button data-act="pLock">${U.locked ? '잠금 해제' : '지금 잠그기'}</button></div><label>프레임 색상<select data-change="sText" data-k="sys.deviceColor">${[['natural', '내추럴 티타늄'], ['black', '블랙 티타늄'], ['white', '화이트 티타늄'], ['desert', '데저트 티타늄'], ['blue', '블루 티타늄']].map(([v, l]) => `<option value="${v}" ${S.sys.deviceColor === v ? 'selected' : ''}>${l}</option>`).join('')}</select></label>
-      <div class="pn-btns"><button data-act="sWall" data-k="lockWall">잠금화면 배경</button><button data-act="sWall" data-k="homeWall">홈 화면 배경</button><button data-act="push2" data-app="settings" data-v="sub" data-k="icons">앱 아이콘 바꾸기</button><button data-act="icCropOpen">스크린샷에서 아이콘 가져오기</button><button data-act="pHomeEdit">홈 화면 앱·위젯 배치 바꾸기</button><button data-act="pHomeLib">앱 보관함 (제거한 앱·위젯 다시 넣기)</button><button data-act="pHomeReset">기본 배치로</button></div></section>
+      <div class="pn-btns"><button data-act="sWall" data-k="lockWall">잠금화면 배경</button><button data-act="sWall" data-k="homeWall">홈 화면 배경</button><button data-act="push2" data-app="settings" data-v="sub" data-k="icons">앱 아이콘 바꾸기</button><button data-act="icCropOpen">스크린샷에서 아이콘 가져오기</button><button data-act="pHomeEdit">홈 화면 앱·위젯 배치 바꾸기</button><button data-act="pHomeLib">앱 보관함 (제거한 앱·위젯 다시 넣기)</button><button data-act="pHomeFolder">앱 폴더 만들기</button><button data-act="pHomeReset">기본 배치로</button></div></section>
     <section><h4>잠금</h4><div class="pn-g2"><label>암호<input id="pPin" inputmode="numeric" maxlength="6" value="${esc(S.sys.pin)}" data-change="sPin"></label><label class="pn-sw" style="align-self:end"><input type="checkbox" data-change="pBool" data-k="sys.usePin" ${pv('sys.usePin') ? 'checked' : ''}><span></span>암호 사용</label></div><div class="pn-btns"><button data-act="pLock">${U.locked ? '잠금 해제' : '지금 잠그기'}</button></div></section>
     <section><h4>사운드</h4><label class="pn-sw"><input type="checkbox" data-change="pBool" data-k="sys.sound" ${pv('sys.sound') ? 'checked' : ''}><span></span>알림음</label><label class="pn-sw"><input type="checkbox" data-change="pBool" data-k="sys.keySound" ${pv('sys.keySound') ? 'checked' : ''}><span></span>키보드 타자음</label><label>음량<input type="range" min="0" max="100" value="${S.sys.volume}" data-change="sNum" data-k="sys.volume"></label></section>
     <section><h4>내 정보</h4><div class="pn-btns"><button data-act="pEdit" data-k="sme">기본 프로필 (이름·번호·사진)</button><button data-act="pEdit" data-k="kme">카카오톡 프로필</button><button data-act="pEdit" data-k="ime">인스타 프로필</button><button data-act="pEdit" data-k="twme">트위터 프로필</button></div></section>`;
@@ -5368,7 +5496,8 @@ function renderPanel() {
   $('.pn-b', el).scrollTop = scroll;
   if (fid) { const f = document.getElementById(fid); if (f) { f.focus(); try { if (ss != null) f.setSelectionRange(ss, ss); } catch (e) { } } }
 }
-ACT.pHomeEdit = () => { if (U.app) closeApp(true); if (U.locked) { U.locked = false; U.pinOpen = false; renderLock(); renderStatus(); } homeEditStart(); toast('앱·위젯을 끌어서 옮기고, −로 제거, ＋로 다시 넣을 수 있어요. 끝나면 [완료]'); };
+ACT.pHomeEdit = () => { if (U.app) closeApp(true); if (U.locked) { U.locked = false; U.pinOpen = false; renderLock(); renderStatus(); } homeEditStart(); toast('끌어서 옮기기 · 앱을 다른 앱 위에 놓으면 폴더 · −로 제거 · ＋로 다시 넣기. 끝나면 [완료]'); };
+ACT.pHomeFolder = () => { if (U.app) closeApp(true); if (U.locked) { U.locked = false; U.pinOpen = false; renderLock(); renderStatus(); } ACT.hFolderNew(); };
 ACT.pHomeLib = () => { if (U.app) closeApp(true); if (U.locked) { U.locked = false; U.pinOpen = false; renderLock(); renderStatus(); } if (!U.homeEdit) homeEditStart(); ACT.homeLib(); };
 ACT.pHomeReset = () => { S.layout = null; U.hmSel = null; U.homeEdit = false; commit(); toast('기본 배치로 되돌렸어요'); };
 ACT.fsOn = () => setFS(true);
@@ -6711,11 +6840,19 @@ document.addEventListener('pointercancel', () => { clearTimeout(lpT); lpT = null
 })();
 
 /* --- 홈 화면: 길게 눌러 편집 모드, 끌어서 앱 옮기기 --- */
+// 끌고 있는 앱을 대상 아이콘 '가운데'에 놓으면 폴더 만들기/넣기 (아이콘 가장자리·이름 쪽이면 자리 옮기기)
+function canMerge(id, t, e) {
+  const tid = t.dataset.item;
+  if (!tid || tid === id || U.fOpen || t.dataset.zone === 'folder' || !APPDEF[id] || WIDGETS[tid]) return false;
+  const ic = t.querySelector('.fd-ic, .aicon'); if (!ic) return false;
+  const r = ic.getBoundingClientRect(), dx = r.width * .18, dy = r.height * .18;
+  return e.clientX > r.left + dx && e.clientX < r.right - dx && e.clientY > r.top + dy && e.clientY < r.bottom - dy;
+}
 (function homeGesture() {
   const home = $('#home'), scr = $('#screen'); let st = null, lp = null, ghost = null;
   const k = () => scr.getBoundingClientRect().width / scr.offsetWidth || 1;
   home.addEventListener('pointerdown', e => {
-    if (e.button || U.locked || U.app || e.target.closest('.hm-del,.hm-edbar')) return;
+    if (e.button || U.locked || U.app || e.target.closest('.hm-del,.hm-edbar,.fd-in')) return;
     const app = e.target.closest('[data-item]');
     st = { x: e.clientX, y: e.clientY, id: app?.dataset.item, el: app, drag: false };
     clearTimeout(lp);
@@ -6728,12 +6865,17 @@ document.addEventListener('pointercancel', () => { clearTimeout(lpT); lpT = null
     if (!st.id) return;
     if (!st.drag && Math.hypot(dx, dy) > 6) {
       st.drag = true; U.hmSel = null;
-      const item = $(`#home [data-item="${st.id}"]`), src = item && (WIDGETS[st.id] ? $('.wg', item) : $('.aicon', item)); if (!src) { st = null; return; }
+      const item = $(`#home [data-item="${st.id}"]`), src = item && (WIDGETS[st.id] ? $('.wg', item) : isFolder(st.id) ? $('.fd-ic', item) : $('.aicon', item)); if (!src) { st = null; return; }
       ghost = src.cloneNode(true); ghost.classList.add('hm-ghost');
       if (WIDGETS[st.id]) { ghost.classList.add('wgg'); ghost.style.width = src.offsetWidth + 'px'; ghost.style.height = src.offsetHeight + 'px'; st.gw = src.offsetWidth / 2; st.gh = src.offsetHeight / 2; } else { st.gw = 31; st.gh = 31; }
       scr.appendChild(ghost); item.classList.add('dragging');
     }
-    if (st.drag && ghost) { const r = scr.getBoundingClientRect(), kk = k(); ghost.style.left = ((e.clientX - r.left) / kk - st.gw) + 'px'; ghost.style.top = ((e.clientY - r.top) / kk - st.gh) + 'px'; }
+    if (st.drag && ghost) {
+      const r = scr.getBoundingClientRect(), kk = k(); ghost.style.left = ((e.clientX - r.left) / kk - st.gw) + 'px'; ghost.style.top = ((e.clientY - r.top) / kk - st.gh) + 'px';
+      const t = document.elementFromPoint(e.clientX, e.clientY)?.closest('#home .hm-app[data-item]'), m = t && canMerge(st.id, t, e);
+      if (st.hint && st.hint !== t) st.hint.classList.remove('merge');
+      if (t) t.classList.toggle('merge', !!m); st.hint = t;
+    }
   });
   window.addEventListener('pointerup', e => {
     clearTimeout(lp);
@@ -6743,7 +6885,7 @@ document.addEventListener('pointercancel', () => { clearTimeout(lpT); lpT = null
     suppressClick = true; setTimeout(() => suppressClick = false, 300);
     const under = document.elementFromPoint(e.clientX, e.clientY);
     const tApp = under?.closest('#home [data-item]'), tZone = under?.closest('#home [data-zone]');
-    homeMove(s.id, tApp?.dataset.item || null, tApp ? tApp.dataset.zone : (tZone?.dataset.zone || 'home'));
+    homeMove(s.id, tApp?.dataset.item || null, tApp ? tApp.dataset.zone : (tZone?.dataset.zone || 'home'), { merge: !!(tApp && canMerge(s.id, tApp, e)), fid: tZone?.dataset.folder || U.fOpen });
   });
   window.addEventListener('pointercancel', () => { clearTimeout(lp); st = null; ghost?.remove(); ghost = null; renderHome(); });
 })();
